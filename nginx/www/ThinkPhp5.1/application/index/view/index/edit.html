@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <form method="post" action="/user/{$res['id']}" >
+        <input type="hidden" name="_method" value="put">
+        <table class=" table-responsive col-sm-8 col-sm-offset-2">
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" name="user_name" class="form-control form-group" value="{$res['user_name']}"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="text" name="password" class="form-control form-group" value="{$res['password']}"></td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td><input type="text" name="age" class="form-control form-group" value="{$res['age']}"></td>
+            </tr>
+            <tr>
+                <td>操作</td>
+                <td><input type="submit" class="btn btn-success" value="修改"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

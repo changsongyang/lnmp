@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<form action="/user/{$id}"  method="post">
+    <input type="hidden" name="_method" value="delete">
+    <center><h3>您确定要删除ID为{$id}的用户？</h3>
+    <button type="submit" class="btn btn-success">确定删除</button></center>
+</form>
+
+</body>
+</html>

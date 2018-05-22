@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<table class="table table-responsive table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    {volist name="arr" id="vo"}
+    <tbody>
+    <tr>
+        <td>{$vo.id}</td>
+        <td>{$vo.user_name}</td>
+        <td>{$vo.password}</td>
+        <td>{$vo.age}</td>
+        <td><a href="user/{$vo.id}/edit">修改</a>
+            <a href="user/{$vo.id}/delete">删除</a>
+        </td>
+    </tr>
+    </tbody>
+    {/volist}
+</table>
+<center><a href="user/create" class="btn btn-success">添加用户</a></center>
+</body>
+</html>
