@@ -1,0 +1,10 @@
+FROM mysql:5.7.18
+
+#设置免密登录
+ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
+
+COPY setup.sh /mysql/setup.sh
+COPY schema.sql /mysql/schema.sql
+
+#设置容器启动时执行的命令
+CMD ["sh", "/mysql/setup.sh"]
