@@ -5,7 +5,7 @@ services:
       depends_on:
         - php
         # nginx镜像的路径
-      build: ./nginx
+      image: nginx:1.13.0
           # 这样使nginx容器把网站文件和目录存放到主机目录中，持久化和方便管理
       volumes:
         - ./nginx/www:/usr/share/nginx/html
@@ -25,7 +25,7 @@ services:
     depends_on:
       - mysql
       - redis
-    build: ./php
+    image: freshsauce/cf-php7-fpm-redis
     ports:
       - "9000"
     networks:
@@ -58,7 +58,7 @@ services:
 
   # REDIS
   redis:
-     build: ./redis
+     image: redis:3.2.11
      ports:
        - "6379:6379"
      networks:
