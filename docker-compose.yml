@@ -56,7 +56,6 @@ services:
        - "3306:3306"
     restart: always
 
-  # REDIS
   redis:
      image: redis:3.2.11
      ports:
